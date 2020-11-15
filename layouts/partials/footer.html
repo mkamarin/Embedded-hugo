@@ -1,0 +1,36 @@
+<footer>
+<div class="footer-content">
+    {{if ne .Section ""}}
+    <div class="content">
+        {{with .PrevInSection}}
+            <a href="{{.Permalink}}"><strong>&lt;</strong></a>
+        {{else}}
+            <a class="grayed-out" href="javascript:void()"><strong>&lt;</strong></a>
+        {{end}}
+        <a style="margin: 0 90px 0 90px;" href="#">top</i></a>
+        {{with .NextInSection}}
+            <a href="{{.Permalink}}"><strong>&gt;</strong></a>
+        {{else}}
+            <a class="grayed-out" href="javascript:void()"><strong>&gt;</strong></a>
+        {{end}}
+    </div>
+    {{end}}
+
+{{if (or (isset .Site.Params "mail") (isset .Site.Params "phone") ) }}
+  <div class="contact-info">
+      {{with .Site.Params.mail}}
+          <div class="footer-mail">
+          <i>&#9993;</i> <a href="mailto:{{.}}">{{.}}</a> </div>
+      {{end}}
+      {{with .Site.Params.phone}}
+      <div class="footer-phone">
+          <i>&#9743;</i> {{.}} 
+      </div>
+      {{end}}
+  </div>
+{{end}}
+{{with .Site.Copyright}}
+<p class="copyright meta">{{.}}</p>
+{{end}}
+</div>
+</footer>

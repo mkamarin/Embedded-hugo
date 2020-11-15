@@ -1,0 +1,8 @@
+{{ define "main" }}
+    {{with .Title}}
+    <h1 id="title">{{.}}</h1>
+    {{else}}
+    <div class="spacer"></div>
+    {{end}}
+    {{.Content}}
+{{end}}

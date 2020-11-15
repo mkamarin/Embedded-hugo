@@ -1,0 +1,7 @@
+{{define "main"}}
+<div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+    <h1>404</h1>
+    <h2>{{ i18n "page_not_found" }}</h2>
+    <p>{{ i18n "page_does_not_exist" }}<br />{{ i18n "head_back" .Site.BaseURL | safeHTML }}</p>
+</div>
+{{end}}
