@@ -4,10 +4,10 @@
 name = "Embedded hugo"
 license = "GPLv3"
 licenselink = "https://github.com/mkamarin/Embedded-hugo/blob/main/LICENSE"
-description = "Hugo theme for embedded micro-controllers"
+description = "Hugo theme for embedded IoT micro-controllers"
 homepage = "https://github.com/mkamarin/Embedded-hugo"
-tags = ["technical","responsive","mobile","dark","minimal","light" ]
-features = []
+tags = ["technical","responsive","mobile","dark","minimal","light", "IoT" ]
+features = ["IoT", "responsive", "minimal"]
 min_version = "0.59.1"
 
 [author]

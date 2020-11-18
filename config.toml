@@ -1,0 +1,30 @@
+baseURL = "https://example.com/"
+languageCode = "en-us"
+title = "IoT Embedded"
+
+# generate this site with: hugo --gc --minifyu
+
+# Disable the generation of some pages that are not useful in an embeded system
+disableKinds = ["RSS","taxonomy","taxonomyTerm","sitemap","robotsTXT"]
+
+copyright = "" #"Copyright © 2020, Mike A. Marin; all rights reserved."
+theme = "embedded"
+
+[params]
+  author = "your name"
+  description = "your description"
+  useAvatar = false
+  mail = "mail@example.com"
+  phone = "8888888888"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    pre = "&#10025;" #Start dingbats HTML symbol
+    url = "/"
+    weight = 1 
+  [[menu.main]]
+    name = "About"
+    pre = ""
+    url = "/about/"
+    weight = 2
