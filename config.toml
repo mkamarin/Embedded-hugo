@@ -8,7 +8,7 @@ title = "IoT Embedded"
 disableKinds = ["RSS","taxonomy","taxonomyTerm","sitemap","robotsTXT"]
 
 copyright = "" #"Copyright © 2020, Mike A. Marin; all rights reserved."
-theme = "embedded"
+theme = "Embedded"
 
 [params]
   author = "your name"

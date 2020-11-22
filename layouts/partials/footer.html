@@ -1,36 +1,40 @@
 <footer>
-<div class="footer-content">
+<table class="foot-tb">
     {{if ne .Section ""}}
-    <div class="content">
+    <tr><td class="foot-tb-cel">
         {{with .PrevInSection}}
             <a href="{{.Permalink}}"><strong>&#10096;</strong></a>
         {{else}}
             <a class="grayed-out" href="javascript:void()"><strong>&#10096;</strong></a>
         {{end}}
-        <a style="margin: 0 90px 0 90px;" href="#">top</i></a>
+        <a class="foot-tb-top" href="#">top</i></a>
         {{with .NextInSection}}
             <a href="{{.Permalink}}"><strong>&#10097;</strong></a>
         {{else}}
             <a class="grayed-out" href="javascript:void()"><strong>&#10097;</strong></a>
         {{end}}
-    </div>
+    </td></tr>
     {{end}}
 
 {{if (or (isset .Site.Params "mail") (isset .Site.Params "phone") ) }}
-  <div class="contact-info">
+    <tr><td class="foot-tb-cel">
       {{with .Site.Params.mail}}
-          <div class="footer-mail">
-          <i>&#9993;</i> <a href="mailto:{{.}}">{{.}}</a> </div>
+          <div>
+              <i>&#9993;</i> <a href="mailto:{{.}}">{{.}}</a> 
+          </div>
       {{end}}
       {{with .Site.Params.phone}}
-      <div class="footer-phone">
+      <div>
           <i>&#9743;</i> {{.}} 
       </div>
       {{end}}
-  </div>
+    </td></tr>
 {{end}}
 {{with .Site.Copyright}}
-<p class="copyright meta">{{.}}</p>
+    <tr><td class="foot-tb-cel">
+<div class="copyright meta">{{.}}</div>
+    </td></tr>
 {{end}}
-</div>
+</table>
+
 </footer>
